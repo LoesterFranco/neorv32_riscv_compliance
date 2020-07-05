@@ -32,3 +32,9 @@ via the [`.ci/install.sh`](https://github.com/stnolting/neorv32_riscv_compliance
 The provided new [target folder (`neorv32`)](https://github.com/stnolting/neorv32_riscv_compliance/blob/master/test_framework/riscv-target) is automatically copied into the RISC-V compliance test suite.
 
 Next, the actual tests are started via the [`.ci/run_tests.sh`](https://github.com/stnolting/neorv32_riscv_compliance/blob/master/.ci/run_tests.sh) script:
+
+
+## License
+
+This is a hobby project released under the BSD 3-Clause license. No copyright infringement intended.
+Other implied/used projects might have different licensing - see their documentation to get more information.
