@@ -1,0 +1,23 @@
+dist: bionic
+
+services:
+  - docker
+
+env:
+  - PATH=$PATH:$(pwd)/riscv/bin
+
+script:
+
+  # Get simulator tools
+  - docker pull ghdl/ghdl:buster-gcc-8.3.0
+
+  # Get toolchain and repos
+  - /bin/bash -c "chmod u+x .ci/install.sh && .ci/install.sh"
+
+  # Check compliance
+  - /bin/bash -c "chmod u+x .ci/run_tests.sh && .ci/run_tests.sh"
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
