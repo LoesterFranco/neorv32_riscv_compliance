@@ -16,8 +16,6 @@ mkdir riscv
 tar -xzf riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz -C riscv/
 pwd
 rm -f riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
-ls -al
-ls -al riscv/
 
 # Test toolchain
 riscv32-unknown-elf-gcc -v
@@ -44,6 +42,7 @@ cp -r test_framework/riscv-target/neorv32 riscv-compliance/riscv-target/.
 
 # Done
 ls -al
+ls -al riscv/
 echo ""
 echo "Installation done."
 echo ""
