@@ -18,7 +18,7 @@ RUN_TARGET=\
 	cp -f $< $(NEORV32_HOME)/sw/example/blink_led/main.elf; \
 	make -C $(NEORV32_HOME)/sw/example/blink_led main.bin; \
 	make -C $(NEORV32_HOME)/sw/example/blink_led install; \
-	sh $(NEORV32_HOME)/sim/ghdl/ghdl_sim.sh >> /dev/null; \
+	sh $(NEORV32_HOME)/sim/ghdl/ghdl_sim.sh --stop-time=500us >> /dev/null; \
 	cp $(work_dir_isa)/neorv32.devnull.data.out $(*).signature.output;
 
 
