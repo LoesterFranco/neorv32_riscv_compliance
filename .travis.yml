@@ -15,7 +15,9 @@ script:
   - /bin/bash -c "chmod u+x .ci/install.sh && .ci/install.sh"
 
   # Check compliance
-  - /bin/bash -c "chmod u+x .ci/run_tests.sh && .ci/run_tests.sh"
+  - >
+    docker run -t -v `pwd`:/mnt/data ghdl/ghdl:buster-gcc-8.3.0
+    /bin/bash -c "chmod u+x /mnt/data/.ci/run_tests.sh && /mnt/data/.ci/run_tests.sh"
 
 notifications:
   email:
