@@ -10,7 +10,7 @@ echo ""
 rm -f riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
 wget https://github.com/stnolting/riscv_gcc_prebuilt/raw/master/data/riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
 
-# Decompress
+# Decompress toolchain
 rm -rf riscv
 mkdir riscv
 tar -xzf riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz -C riscv/
@@ -18,6 +18,9 @@ pwd
 rm -f riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
 ls -al
 ls -al riscv/
+
+# Test toolchain
+riscv32-unknown-elf-gcc -v
 
 # Download RISC-V compliance test suite
 echo ""
@@ -39,6 +42,8 @@ echo "Installing neorv32 test target..."
 echo ""
 cp -r test_framework/riscv-target/neorv32 riscv-compliance/riscv-target/.
 
-
+# Done
+ls -al
+echo ""
 echo "Installation done."
 echo ""
