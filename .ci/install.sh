@@ -7,6 +7,7 @@ set -e
 echo ""
 echo "Downloading prebuilt RISC-V GCC toolchain..."
 echo ""
+rm -f riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
 wget https://github.com/stnolting/riscv_gcc_prebuilt/raw/master/data/riscv32-unknown-elf.gcc-9.2.0.rv32i.ilp32.tar.gz
 
 # Decompress
