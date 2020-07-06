@@ -15,7 +15,7 @@
 // RV Compliance Macros
 //-----------------------------------------------------------------------
 
-// this will dump the results via DEVNULL.hex.sim_output
+// this will dump the results via the DEVNULL data file output
 #define RV_COMPLIANCE_HALT                                                    \
   			la a0, begin_signature;                                               \
 				la a1, end_signature;                                                 \
@@ -33,16 +33,8 @@
 #define RV_COMPLIANCE_RV32M                                                   \
         RVTEST_RV32M                                                          \
 
-#ifdef NEORV32_DISABLE_C_EXT
-#define RV_COMPLIANCE_CODE_BEGIN                                              \
-        csrrci zero, misa, 4;                                                 \
-        RVTEST_CODE_BEGIN                                                     \
-
-#else
 #define RV_COMPLIANCE_CODE_BEGIN                                              \
         RVTEST_CODE_BEGIN                                                     \
-
-#endif
 
 #define RV_COMPLIANCE_CODE_END                                                \
         RVTEST_CODE_END                                                       \

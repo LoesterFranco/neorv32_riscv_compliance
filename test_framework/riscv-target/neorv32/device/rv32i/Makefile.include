@@ -29,9 +29,6 @@ RISCV_OBJCOPY  ?= $(RISCV_PREFIX)objcopy
 RISCV_READELF  ?= $(RISCV_PREFIX)readelf
 RISCV_GCC_OPTS ?= -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -march=rv32i
 
-# disable C extension only for this base ISA test (rv32i)
-RISCV_GCC_OPTS += -DNEORV32_DISABLE_C_EXT
-
 COMPILE_TARGET=\
 	$$(RISCV_GCC) $(2) $$(RISCV_GCC_OPTS) \
 		-I$(ROOTDIR)/riscv-test-env/ \
