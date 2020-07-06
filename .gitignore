@@ -1,6 +1,6 @@
-neorv32/
-riscv/
-riscv-compliance/
+/riscv
+/riscv-compliance
+/neorv32
 *.gz
 *.out
 *.cf
