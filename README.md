@@ -50,8 +50,11 @@ For more information take a look a the [![NEORV32 datasheet](https://raw.githubu
 
 ## License
 
-This is a hobby project released under the BSD 3-Clause license. No copyright infringement intended.
-Other implied/used projects might have different licensing - see their documentation to get more information.
+This is project is released under the BSD 3-Clause license. No copyright infringement intended.
+Other implied or used projects might have different licensing - see their documentation to get more information.
+
+
+## Acknowledgement
 
 Continous integration provided by [Travis CI](https://travis-ci.com/stnolting/neorv32_riscv_compliance)
 and powered by [GHDL](https://github.com/ghdl/ghdl).
