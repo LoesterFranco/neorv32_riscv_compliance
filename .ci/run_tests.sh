@@ -20,3 +20,6 @@ make --silent -C $homedir/riscv-compliance NEORV32_HOME=$NEORV32_HOME_DIR RISCV_
 make --silent -C $homedir/riscv-compliance NEORV32_HOME=$NEORV32_HOME_DIR RISCV_TARGET=neorv32 RISCV_DEVICE=rv32imc      RISCV_ISA=rv32imc      RISCV_PREFIX=riscv32-unknown-elf-
 make --silent -C $homedir/riscv-compliance NEORV32_HOME=$NEORV32_HOME_DIR RISCV_TARGET=neorv32 RISCV_DEVICE=rv32Zicsr    RISCV_ISA=rv32Zicsr    RISCV_PREFIX=riscv32-unknown-elf-
 make --silent -C $homedir/riscv-compliance NEORV32_HOME=$NEORV32_HOME_DIR RISCV_TARGET=neorv32 RISCV_DEVICE=rv32Zifencei RISCV_ISA=rv32Zifencei RISCV_PREFIX=riscv32-unknown-elf-
+
+echo ""
+echo "Compliance tests completed"
